@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+.top-bar {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #020617;
+}
+
+.logo {
+    color: #38bdf8;
+}
+
+.search-box {
+    width: 40%;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 45%;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.hero-text button {
+    margin-top: 25px;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #38bdf8;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-text button:hover {
+    transform: scale(1.1);
+}
+
+.hero-image img {
+    height: 520px;           
+    width: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 30px rgba(0,0,0,0.4));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: #020617;
+}
+
+.feature-card {
+    padding: 20px 30px;
+    background: #1e293b;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: #38bdf8;
+    color: black;
+}
+
+.section {
+    padding: 60px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.category {
+    padding: 30px 45px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.category:hover {
+    transform: scale(1.15);
+}
+
+.neon1 { background: #22c55e; }
+.neon2 { background: #f97316; }
+.neon3 { background: #38bdf8; }
+.neon4 { background: #ec4899; }
+
+.dark {
+    background: #020617;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 0 25px #38bdf8;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.deal {
+    background: linear-gradient(90deg, #22c55e, #38bdf8);
+    text-align: center;
+    padding: 50px;
+    color: black;
+}
+
+.footer {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+}
